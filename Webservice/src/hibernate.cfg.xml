@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC 
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+		<session-factory>
+
+	<!-- <property name="hibernate.connection.driver_class">
+			com.mysql.jdbc.Driver
+		</property>
+
+		<property name="hibernate.connection.url">
+			jdbc:mysql://127.0.0.1:3306/qwerty
+			
+		</property>
+
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">machine187</property>
+
+
+		<property name="show_sql">true</property>
+
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property -->
+		
+		<property name="hibernate.connection.driver_class">
+			oracle.jdbc.driver.OracleDriver
+		</property>
+
+		<property name="hibernate.connection.url">
+			jdbc:oracle:thin:@127.0.0.1:1521:XE
+		</property>
+
+		<property name="hibernate.connection.username">hr</property>
+		<property name="hibernate.connection.password">hr</property>
+
+
+		<property name="show_sql">true</property>
+
+		<property name="dialect">
+			org.hibernate.dialect.Oracle9Dialect
+		</property>
+
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.connection.autocommit">true</property>
+
+		<mapping class="com.model.Pojo"/>
+		<mapping class="com.model.OTP"/>
+		<mapping class="com.model.Post"/>
+		<mapping class="com.model.Bookmark"/>
+		<mapping class="com.model.YourVote"/>
+		<mapping class="com.model.CommentOnPost"/>
+
+
+
+	</session-factory>
+
+
+</hibernate-configuration>
+  	
